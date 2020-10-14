@@ -41,16 +41,16 @@ module.exports = function toReadable (number) {
         let digit = numeric;
         if (numeric.length === 2 && numeric[0] === '0') {
             digit = numeric[1];
+        }
         if (digit < 20) {
           return transfer(digit);
         } if (digit > 19) {
           if (digit[1] !== '0') {
-          return toTransfer(digit[0]) + ' ' + transfer(digit[0]);
+          return toTransfer(digit[0]) + ' ' + transfer(digit[1]);
           } else {
           return toTransfer(digit[0]);
           }
         }
-      }
       }
     let result = '';
         number = number.toString();
